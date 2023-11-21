@@ -1,4 +1,7 @@
 node_modules
 android
 ios
+package.json
+package-lock.json
 *.zip
+
