@@ -6,13 +6,14 @@
  */
 
 import React from 'react';
-
-import OTPInputView from '@twotalltotems/react-native-otp-input';
+import OtpInputs from 'react-native-otp-inputs';
 import {
   Image,
+  TextInput,
   SafeAreaView,
   ScrollView,
   StatusBar,
+  TouchableOpacity,
   StyleSheet,
   Text,
   useColorScheme,
@@ -26,6 +27,7 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+
 
 
 function App() {
@@ -60,22 +62,30 @@ function App() {
 
 
       <View style={{alignItems:'center',flexDirection:'row',alignContent:'center',alignSelf:'center'}}>
-
-      <Text style={styles.InputBox}></Text>
-      <Text style={styles.InputBox}></Text>
-      <Text style={styles.InputBox}></Text>
-      <Text style={styles.InputBox}></Text>
+      {/* <OtpInputs
+        handleChange={(code) => console.log(code)}
+        style={styles.InputBox}
+        numberOfInputs={4} autofillFromClipboard={false}        /> */}
+      <TextInput style={styles.InputBox} maxLength={1} keyboardType='numeric'/>
+      <TextInput style={styles.InputBox} maxLength={1} keyboardType='numeric' />
+      <TextInput style={styles.InputBox} maxLength={1} keyboardType='numeric' />
+      <TextInput style={styles.InputBox} maxLength={1} keyboardType='numeric'/>
       </View>
       
       <View style={{alignItems:'center',alignContent:'center'}}>
       <Text style={{marginLeft:25,marginTop:40,fontWeight:'bold', fontSize:30,color:'#006D77'}}>Resend
       </Text> 
       </View>
+
+
       
+
+    <TouchableOpacity >
       <View style={{alignItems:'center',alignContent:'center'}}>
+
       <Text style={{marginLeft:25,width:200,height:65,verticalAlign:'middle',borderRadius:20,backgroundColor:'#7CDDC4',marginTop:40,fontWeight:'bold', textAlign:'center',fontSize:30,color:'#FFFFFF'}}>Verify</Text>
       </View>
-      
+      </TouchableOpacity>
 
     </SafeAreaView>
     
@@ -94,11 +104,13 @@ const styles = StyleSheet.create({
   InputBox:{
     marginLeft:15,
     verticalAlign:'middle',
-    height:40,
+    height:60,
+    width:50,
     textAlign:'center',
     borderRadius:20,
-    padding:25,
+    fontSize : 20,
     marginTop:40,
+    
     marginHorizontal:10,
     backgroundColor:'#7CDDC4',
     flexDirection:'row'
