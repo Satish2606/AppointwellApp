@@ -7,7 +7,7 @@
 
 import React from 'react';
 
-import OTPInputView from '@twotalltotems/react-native-otp-input';
+// import OTPInputView from '@twotalltotems/react-native-otp-input';
 import {
   Image,
   SafeAreaView,
@@ -28,7 +28,7 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 
-function App() {
+function OTP() {
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
@@ -169,4 +169,4 @@ const styles = StyleSheet.create({
     fontWeight: '700',
   },
 });
-export default App;
+export default OTP;

@@ -1,9 +1,32 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
+
+// import React from 'react';
+// import {
+//   SafeAreaView,
+//   ScrollView,
+//   StatusBar,
+//   StyleSheet,
+//   Text,
+//   useColorScheme,
+//   View,
+//   Button
+// } from 'react-native';
+
+
+
+// function DetailsScreen({ navigation }) {
+//     return (
+//       <View style={{alignSelf:'center',marginVertical:'30%'}}>
+//         <Text>Details Screen</Text>
+//         <Button 
+         
+//           title="Go back to Home"
+//           onPress={() => navigation.navigate('Home')}
+          
+//         />
+//       </View>
+//     );
+//   }
+  
 
 import React from 'react';
 
@@ -28,8 +51,11 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 
-function login() {
+function Verification({ navigation }) {
   const isDarkMode = useColorScheme() === 'dark';
+
+
+  console.log("Verification page")
 
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
@@ -37,18 +63,18 @@ function login() {
 
   return (
     <SafeAreaView >
-      <View style={{flexDirection:'row',marginLeft:10,marginTop:20,alignItems:'center'}}>
+      {/* <View style={{flexDirection:'row',marginLeft:10,marginTop:20,alignItems:'center'}}>
       <Image 
       style={{width:30,height:30}}
-      source={require('./app/images/arrow.png')}
+      source={require('../images/arrow.png')}
       />
       <Text style={{marginLeft:25,fontWeight:'bold', fontSize:30,color:'#006D77'}}>Verification</Text>
-      </View>
+      </View> */}
 
       <View style={{alignItems:'center'}}>
       <Image 
       style={{width:250,height:250}}
-      source={require('./app/images/logo.png')}
+      source={require('../images/logo.png')}
       />
 
       </View>
@@ -169,4 +195,4 @@ const styles = StyleSheet.create({
     fontWeight: '700',
   },
 });
-export default login;
+export default Verification;  
